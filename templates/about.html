@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    <table>
+        <tr class="table_tag">
+            <th id="item">Food item</th>
+            <th id="calories">Calories</th>
+            <th id="qty">Quantity</th>
+        </tr>
+        {% for detail in details %}
+      <tr>
+          <td>{{detail['item']}}</td>
+         <td>{{detail['calories']}}</td>
+         <td>{{detail['qty']}}</td>
+       {% endfor %}
+    </table>
+</body>
+</html>
